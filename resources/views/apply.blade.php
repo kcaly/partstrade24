@@ -187,7 +187,7 @@
                                     <img src="{{ asset('assets/img/logo_partstrade24gmbh_white_256x256.png') }}">
                                     <h1 class="page-header-ui-title mb-3">DOŁĄCZ DO NAS!</h1>
                                     <p class="page-header-ui-text">Wypełnij dane osobowe w celu złożenia aplikacji. Po
-                                        przesłaniu formalarza skontaktujemy się z Tobą w celu uzgodnienia terminu
+                                        przesłaniu formularza skontaktujemy się z Tobą w celu uzgodnienia terminu
                                         spotkania. Aby przyspieszyć proces rekrutacyjny wypełnij także dane niezbędne do
                                         sporządzenia umowy.</p>
                                 </div>
