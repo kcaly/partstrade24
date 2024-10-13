@@ -179,7 +179,7 @@
                         </div>
                     </nav> --}}
                 <!-- Page Header-->
-                <header class="page-header-ui page-header-ui-dark bg-gradient-primary-to-white">
+                <header class="page-header-ui page-header-ui-dark bg-primary">
                     <div class="page-header-ui-content">
                         <div class="container px-5 text-center">
                             <div class="row gx-5 justify-content-center">
