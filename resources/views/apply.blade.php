@@ -185,7 +185,7 @@
                             <div class="row gx-5 justify-content-center">
                                 <div class="col-lg-8">
                                     <img src="{{ asset('assets/img/logo_partstrade24gmbh_white_256x256.png') }}">
-                                    <h1 class="page-header-ui-title mb-3">JOIN THE TEAM!</h1>
+                                    <h1 class="page-header-ui-title mb-3">DOŁĄCZ DO NAS!</h1>
                                     <p class="page-header-ui-text">Wypełnij dane osobowe w celu złożenia aplikacji. Po
                                         przesłaniu formalarza skontaktujemy się z Tobą w celu uzgodnienia terminu
                                         spotkania. Aby przyspieszyć proces rekrutacyjny wypełnij także dane niezbędne do
