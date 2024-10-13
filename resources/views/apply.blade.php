@@ -1,23 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>Contact - SB UI Kit Pro</title>
-        <link href="css/styles.css" rel="stylesheet" />
-        <link rel="icon" type="image/x-icon" href="assets/img/favicon.png" />
-        <script data-search-pseudo-elements defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.29.0/feather.min.js" crossorigin="anonymous"></script>
-    </head>
-    <body>
-        <div id="layoutDefault">
-            <div id="layoutDefault_content">
-                <main>
-                    <!-- Navbar-->
-                    {{-- <nav class="navbar navbar-marketing navbar-expand-lg bg-transparent navbar-dark fixed-top">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Contact - SB UI Kit Pro</title>
+    <link href="{{ asset('css/styles.css') }}" rel="stylesheet" />
+    <link rel="icon" type="image/x-icon" href="{{ asset('assets/img/favicon.png') }}" />
+    <script data-search-pseudo-elements defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.29.0/feather.min.js" crossorigin="anonymous">
+    </script>
+</head>
+
+<body>
+    <div id="layoutDefault">
+        <div id="layoutDefault_content">
+            <main>
+                <!-- Navbar-->
+                {{-- <nav class="navbar navbar-marketing navbar-expand-lg bg-transparent navbar-dark fixed-top">
                         <div class="container px-5">
                             <a class="navbar-brand text-white" href="index.html">SB UI Kit Pro</a>
                             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><i data-feather="menu"></i></button>
@@ -174,77 +178,134 @@
                             </div>
                         </div>
                     </nav> --}}
-                    <!-- Page Header-->
-                    <header class="page-header-ui page-header-ui-dark bg-gradient-primary-to-secondary">
-                        <div class="page-header-ui-content">
-                            <div class="container px-5 text-center">
-                                <div class="row gx-5 justify-content-center">
-                                    <div class="col-lg-8">
-                                        <img src="{{ asset('assets/img/logo_partstrade24gmbh_white_256x256.png') }}">
-                                        <h1 class="page-header-ui-title mb-3">Kwestionariusz aplikacyjny</h1>
-                                        <p class="page-header-ui-text">Wypełnij dane osobowe w celu złożenia aplikacji. Po przesłaniu formalarza skontaktujemy się z Tobą w celu uzgodnienia terminu spotkania. Aby przyspieszyć proces rekrutacyjny wypełnij także dane niezbędne do sporządzenia umowy.</p>
-                                    </div>
+                <!-- Page Header-->
+                <header class="page-header-ui page-header-ui-dark bg-gradient-primary-to-white">
+                    <div class="page-header-ui-content">
+                        <div class="container px-5 text-center">
+                            <div class="row gx-5 justify-content-center">
+                                <div class="col-lg-8">
+                                    <img src="{{ asset('assets/img/logo_partstrade24gmbh_white_256x256.png') }}">
+                                    <h1 class="page-header-ui-title mb-3">DOŁĄCZ DO NAS!</h1>
+                                    <p class="page-header-ui-text">Wypełnij dane osobowe w celu złożenia aplikacji. Po
+                                        przesłaniu formalarza skontaktujemy się z Tobą w celu uzgodnienia terminu
+                                        spotkania. Aby przyspieszyć proces rekrutacyjny wypełnij także dane niezbędne do
+                                        sporządzenia umowy.</p>
                                 </div>
                             </div>
                         </div>
-                        <div class="svg-border-rounded text-light">
-                            <!-- Rounded SVG Border-->
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144.54 17.34" preserveAspectRatio="none" fill="currentColor"><path d="M144.54,17.34H0V0H144.54ZM0,0S32.36,17.34,72.27,17.34,144.54,0,144.54,0"></path></svg>
-                        </div>
-                    </header>
-                    <section class="bg-light py-10">
-                        <div class="container px-5">
-                            <div class="row gx-5 mb-5 justify-content-center">
-                                <div class="col-lg-10 mb-5">
-                                    <div class="card card-link border-bottom-0 border-start-0 border-end-0 border-top-lg border-primary text-center o-visible h-100">
-                                        <div class="card-body">
-                                            <div class="icon-stack icon-stack-xl bg-primary-soft text-primary mb-4 mt-n5 z-1 shadow"><i data-feather="user"></i></div>
-                                            {{-- <h5>Dane osobowe</h5> --}}
-                                            <p class="card-text">Dane kontaktowe</p>
-                                            <form>
-                                                <div class="row gx-5 mb-4">
-                                                    <div class="col-md-6">
-                                                        <label class="text-dark mb-2" for="inputName">Imię</label>
-                                                        <input class="form-control py-4" id="inputName" type="text" placeholder="Full name" />
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <label class="text-dark mb-2" for="inputEmail">Nazwisko</label>
-                                                        <input class="form-control py-4" id="inputEmail" type="email" placeholder="name@example.com" />
-                                                    </div>
+                    </div>
+                    <div class="svg-border-rounded text-light">
+                        <!-- Rounded SVG Border-->
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144.54 17.34" preserveAspectRatio="none"
+                            fill="currentColor">
+                            <path d="M144.54,17.34H0V0H144.54ZM0,0S32.36,17.34,72.27,17.34,144.54,0,144.54,0"></path>
+                        </svg>
+                    </div>
+                </header>
+                <section class="bg-light py-10">
+                    <div class="container px-5">
+                        <div class="row gx-5 mb-5 justify-content-center">
+                            <div class="col-lg-10 mb-5">
+                                <div
+                                    class="card card-link border-bottom-0 border-start-0 border-end-0 border-top-lg border-primary text-center o-visible h-100">
+                                    <div class="card-body">
+                                        <div
+                                            class="icon-stack icon-stack-xl bg-primary-soft text-primary mb-4 mt-n5 z-1 shadow">
+                                            <i data-feather="user"></i></div>
+                                        {{-- <h5>Personal data</h5> --}}
+                                        {{-- <p class="card-text">Dane osobowe</p> --}}
+                                        <form>
+                                            <div class="row gx-5 mb-4">
+                                                <div class="col-md-6">
+                                                    <label class="text-dark mb-2" for="inputName">Imię (Vorname)</label>
+                                                    <input class="form-control py-4" id="inputName" type="text"
+                                                        placeholder="" />
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <label class="text-dark mb-2" for="inputEmail">Nazwisko
+                                                        (Nachname)</label>
+                                                    <input class="form-control py-4" id="inputEmail" type="email"
+                                                        placeholder="" />
+                                                </div>
+                                            </div>
+
+                                            <div class="row gx-5 mb-4">
+                                                <div class="col-md-6">
+                                                    <label class="text-dark mb-2" for="inputName">Data urodzenia
+                                                        (Geburtsdatum)</label>
+                                                    <input class="form-control py-4" id="inputName" type="text"
+                                                        placeholder="" />
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <label class="text-dark mb-2" for="inputEmail">Miejsce urodzenia
+                                                        (Geburtsort)</label>
+                                                    <input class="form-control py-4" id="inputEmail" type="email"
+                                                        placeholder="" />
+                                                </div>
+                                            </div>
+
+                                            {{-- <p class="card-text">Adres zamieszkania</p> --}}
+                                            <div class="row gx-5 mb-4 mt-10">
+                                                <div class="col-md-7">
+                                                    <label class="text-dark mb-2" for="inputName">Ulica (Straße)</label>
+                                                    <input class="form-control py-4" id="inputName" type="text"
+                                                        placeholder="" />
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <label class="text-dark mb-2" for="inputEmail">Numer
+                                                        (Hausnummer)</label>
+                                                    <input class="form-control py-4" id="inputEmail" type="email"
+                                                        placeholder="" />
+                                                </div>
+                                            </div>
+                                            <div class="row gx-5 mb-4">
+                                                <div class="col-md-2">
+                                                    <label class="text-dark mb-2" for="inputName">Kod (PLZ)</label>
+                                                    <input class="form-control py-4" id="inputName" type="text"
+                                                        placeholder="" />
+                                                </div>
+                                                <div class="col-md-8">
+                                                    <label class="text-dark mb-2" for="inputEmail">Miejscowość
+                                                        (Stadt)</label>
+                                                    <input class="form-control py-4" id="inputEmail" type="email"
+                                                        placeholder="" />
+                                                </div>
+                                            </div>
+                                            <div class="row gx-5 mb-4">
+                                                <div class="col-md-4">
+                                                    <label class="text-dark mb-2" for="inputName">Kraj (Land)</label>
+                                                    <input class="form-control py-4" id="inputName" type="text"
+                                                        placeholder="" />
+                                                </div>
+                                                <div class="col-md-6">
+
                                                 </div>
 
-                                                <div class="row gx-5 mb-4">
-                                                    <div class="col-md-6">
-                                                        <label class="text-dark mb-2" for="inputName">Adres e-mail</label>
-                                                        <input class="form-control py-4" id="inputName" type="text" placeholder="Full name" />
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <label class="text-dark mb-2" for="inputEmail">Telefon</label>
-                                                        <input class="form-control py-4" id="inputEmail" type="email" placeholder="name@example.com" />
-                                                    </div>
-                                                </div>
 
 
-                                                <div class="mb-4">
+
+                                                {{-- <div class="mb-4">
                                                     <label class="text-dark mb-2" for="inputMessage">Message</label>
                                                     <textarea class="form-control py-3" id="inputMessage" type="text" placeholder="Enter your message..." rows="4"></textarea>
-                                                </div>
-                                                <div class="text-center"><button class="btn btn-primary mt-4" type="submit">Submit Request</button></div>
-                                            </form>
-                                        </div>
-                                        <div class="card-footer">
+                                                </div> --}}
+
+                                                <div class="text-center"><button class="btn btn-primary mt-4"
+                                                        type="submit">APLIKUJ</button></div>
+                                        </form>
+                                    </div>
+                                    {{-- <div class="card-footer">
                                             <div class="text-primary fw-bold d-inline-flex align-items-center">
                                                 Contact Sales
                                                 <i class="fas fa-arrow-right text-xs ms-1"></i>
                                             </div>
-                                        </div>
-                                    </div>
+                                        </div> --}}
                                 </div>
                             </div>
+                        </div>
 
 
 
-                            <div class="row gx-5 mb-5">
+                        {{-- <div class="row gx-5 mb-5">
                                 <div class="col-lg-4 mb-5">
                                     <a class="card card-link border-bottom-0 border-start-0 border-end-0 border-top-lg border-primary lift text-center o-visible h-100" href="#!">
                                         <div class="card-body">
@@ -290,8 +351,12 @@
                                         </div>
                                     </a>
                                 </div>
-                            </div>
-                            <div class="row gx-5 justify-content-center text-center">
+                            </div> --}}
+
+
+
+
+                        {{-- <div class="row gx-5 justify-content-center text-center">
                                 <div class="col-lg-5 mb-5 mb-lg-0">
                                     <h5>Join us on Discord!</h5>
                                     <p class="fw-light mb-0">Join the discussion on Discord. Our community can help answer questions!</p>
@@ -303,29 +368,30 @@
                                         <a href="#!">support@example.com</a>
                                     </p>
                                 </div>
+                            </div> --}}
+                        <hr class="my-10" />
+                        <div class="row gx-5 justify-content-center">
+                            <div class="col-lg-8 text-center">
+                                <h2>Informacje kontaktowe</h2>
+                                <p class="lead mb-5">Możesz skontaktować się z nami w celu sprawdzenia etapu swojej
+                                    aplikacji lub informacji odnośnie aktualnego statusu kierowcy w systemie Amazon.</p>
                             </div>
-                            <hr class="my-10" />
-                            <div class="row gx-5 justify-content-center">
-                                <div class="col-lg-8 text-center">
-                                    <h2>Can't find the answer you need?</h2>
-                                    <p class="lead mb-5">Contact us and we'll get back to you as soon as possible with a solution to whatever issues you're having with SB UI Kit Pro.</p>
-                                </div>
+                        </div>
+                        <div class="row gx-5 align-items-center mb-10">
+                            <div class="col-lg-4 text-center mb-5 mb-lg-0">
+                                <div class="section-preheading">E-mail</div>
+                                <a href="#!">rekrutacja@partstrade24.de</a>
                             </div>
-                            <div class="row gx-5 align-items-center mb-10">
-                                <div class="col-lg-4 text-center mb-5 mb-lg-0">
-                                    <div class="section-preheading">Message Us</div>
-                                    <a href="#!">Start a chat!</a>
-                                </div>
-                                <div class="col-lg-4 text-center mb-5 mb-lg-0">
-                                    <div class="section-preheading">Call Anytime</div>
-                                    <a href="#!">(555) 565-1846</a>
-                                </div>
-                                <div class="col-lg-4 text-center">
-                                    <div class="section-preheading">Email Us</div>
-                                    <a href="#!">support@startbootstrap.com</a>
-                                </div>
+                            <div class="col-lg-4 text-center mb-5 mb-lg-0">
+                                <div class="section-preheading">Telefon (obsługa w j.polskim)</div>
+                                <a href="#!">+49 176 56611064</a>
                             </div>
-                            <form>
+                            <div class="col-lg-4 text-center">
+                                <div class="section-preheading">Biuro</div>
+                                <a href="#!">Kiehlufer 163<br />D-12057 Berlin<br />+49 176 56611068</a>
+                            </div>
+                        </div>
+                        {{-- <form>
                                 <div class="row gx-5 mb-4">
                                     <div class="col-md-6">
                                         <label class="text-dark mb-2" for="inputName">Full name</label>
@@ -341,31 +407,37 @@
                                     <textarea class="form-control py-3" id="inputMessage" type="text" placeholder="Enter your message..." rows="4"></textarea>
                                 </div>
                                 <div class="text-center"><button class="btn btn-primary mt-4" type="submit">Submit Request</button></div>
-                            </form>
-                        </div>
-                        <div class="svg-border-rounded text-dark">
-                            <!-- Rounded SVG Border-->
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144.54 17.34" preserveAspectRatio="none" fill="currentColor"><path d="M144.54,17.34H0V0H144.54ZM0,0S32.36,17.34,72.27,17.34,144.54,0,144.54,0"></path></svg>
-                        </div>
-                    </section>
-                </main>
-            </div>
-            <div id="layoutDefault_footer">
-                <footer class="footer pt-10 pb-5 mt-auto bg-dark footer-dark">
-                    <div class="container px-5">
-                        <div class="row gx-5">
-                            <div class="col-lg-3">
-                                <div class="footer-brand">SB UI Kit Pro</div>
-                                <div class="mb-3">Design made easy</div>
-                                <div class="icon-list-social mb-5">
-                                    <a class="icon-list-social-link" href="#!"><i class="fab fa-instagram"></i></a>
-                                    <a class="icon-list-social-link" href="#!"><i class="fab fa-facebook"></i></a>
-                                    <a class="icon-list-social-link" href="#!"><i class="fab fa-github"></i></a>
-                                    <a class="icon-list-social-link" href="#!"><i class="fab fa-twitter"></i></a>
-                                </div>
+                            </form> --}}
+                    </div>
+                    <div class="svg-border-rounded text-dark">
+                        <!-- Rounded SVG Border-->
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144.54 17.34" preserveAspectRatio="none"
+                            fill="currentColor">
+                            <path d="M144.54,17.34H0V0H144.54ZM0,0S32.36,17.34,72.27,17.34,144.54,0,144.54,0"></path>
+                        </svg>
+                    </div>
+                </section>
+            </main>
+        </div>
+        <div id="layoutDefault_footer">
+            <footer class="footer pt-10 pb-5 mt-auto bg-dark footer-dark">
+                <div class="container px-5">
+                    <div class="row gx-5">
+                        <div class="col-lg-3">
+                            <div class="footer-brand">PARTS TRADE 24 GmbH</div>
+                            <div class="mb-3">Borkumer Straße 19<br />D-13581 Berlin<br />Deutschland</div>
+                            <div class="icon-list-social mb-5">
+                                <a class="icon-list-social-link"
+                                    href="https://www.linkedin.com/company/partstrade24-gmbh"><i
+                                        class="fab fa-linkedin"></i></a>
+                                <a class="icon-list-social-link" href="https://www.facebook.com/pagml"><i
+                                        class="fab fa-facebook"></i></a>
+                                <a class="icon-list-social-link" href="https://www.instagram.com/partstrade24"><i
+                                        class="fab fa-instagram"></i></a>
                             </div>
-                            <div class="col-lg-9">
-                                <div class="row gx-5">
+                        </div>
+                        <div class="col-lg-9">
+                            {{-- <div class="row gx-5">
                                     <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
                                         <div class="text-uppercase-expanded text-xs mb-4">Product</div>
                                         <ul class="list-unstyled mb-0">
@@ -405,23 +477,25 @@
                                             <li><a href="#!">License</a></li>
                                         </ul>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                        <hr class="my-5" />
-                        <div class="row gx-5 align-items-center">
-                            <div class="col-md-6 small">Copyright &copy; Your Website 2023</div>
-                            <div class="col-md-6 text-md-end small">
-                                <a href="#!">Privacy Policy</a>
-                                &middot;
-                                <a href="#!">Terms &amp; Conditions</a>
-                            </div>
+                                </div> --}}
                         </div>
                     </div>
-                </footer>
-            </div>
+                    <hr class="my-5" />
+                    <div class="row gx-5 align-items-center">
+                        <div class="col-md-6 small">Copyright &copy; PARTS TRADE 24 GmbH</div>
+                        <div class="col-md-6 text-md-end small">
+                            <a href="https://partstrade-24.de/impressum/">Impressum</a>
+                            &middot;
+                            <a href="https://partstrade-24.de/datenschutzerklaerung/">Privacy Policy</a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
         </div>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-        <script src="js/scripts.js"></script>
-    </body>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous">
+    </script>
+    <script src="{{ asset('js/scripts.js') }}"></script>
+</body>
+
 </html>
