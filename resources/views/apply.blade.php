@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>Contact - SB UI Kit Pro</title>
+    <title>Aplikuj - PARTS TRADE 24 GmbH (Amazon Service Partner) </title>
     <link href="{{ asset('css/styles.css') }}" rel="stylesheet" />
     <link rel="icon" type="image/x-icon" href="{{ asset('assets/img/favicon.png') }}" />
     <script data-search-pseudo-elements defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"
@@ -185,7 +185,7 @@
                             <div class="row gx-5 justify-content-center">
                                 <div class="col-lg-8">
                                     <img src="{{ asset('assets/img/logo_partstrade24gmbh_white_256x256.png') }}">
-                                    <h1 class="page-header-ui-title mb-3">JOIN THE TEAM!</h1>
+                                    <h1 class="page-header-ui-title mb-3">DOŁĄCZ DO NAS!</h1>
                                     <p class="page-header-ui-text">Wypełnij dane osobowe w celu złożenia aplikacji. Po
                                         przesłaniu formalarza skontaktujemy się z Tobą w celu uzgodnienia terminu
                                         spotkania. Aby przyspieszyć proces rekrutacyjny wypełnij także dane niezbędne do
