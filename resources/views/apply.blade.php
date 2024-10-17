@@ -187,8 +187,7 @@
                                     <img src="{{ asset('assets/img/logo_partstrade24gmbh_white_256x256.png') }}">
                                     <h1 class="page-header-ui-title mb-3">DOŁĄCZ DO NAS!</h1>
                                     <p class="page-header-ui-text">Wypełnij dane osobowe w celu złożenia aplikacji. Po
-                                        przesłaniu formularza skontaktujemy się z Tobą w celu uzgodnienia terminu
-                                        spotkania. Aby przyspieszyć proces rekrutacyjny wypełnij także dane niezbędne do
+                                        przesłaniu formularza skontaktujemy się z Tobą. Aby przyspieszyć proces rekrutacyjny wypełnij także dane niezbędne do
                                         sporządzenia umowy.</p>
                                 </div>
                             </div>
@@ -230,15 +229,28 @@
                                                 </div>
                                             </div>
 
+                                            
+
                                             <div class="row gx-5 mb-4">
                                                 <p class="card-text"></p>
-                                                <div class="col-md-6">
+                                                <div class="col-md-3">
+                                                    <label class="text-dark mb-2" for="inputName">Płeć (Geschlecht)</label>
+                                                    <select class="form-select py-4" id="inputName" type="text"
+                                                        placeholder="">
+                                                        <option selected></option>
+                                                        <option value="1">mężczyzna (männlich)</option>
+                                                        <option value="2">kobieta (weiblich)</option>
+                                                        <option value="3">inna (divers)
+                                                        </option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-md-4">
                                                     <label class="text-dark mb-2" for="inputName">Telefon
                                                         (Handynummer)</label>
                                                     <input class="form-control py-4" id="inputName" type="text"
                                                         placeholder="" />
                                                 </div>
-                                                <div class="col-md-6">
+                                                <div class="col-md-5">
                                                     <label class="text-dark mb-2" for="inputEmail">E-mail</label>
                                                     <input class="form-control py-4" id="inputEmail" type="email"
                                                         placeholder="" />
@@ -304,23 +316,72 @@
                                                     <label class="text-dark mb-2" for="inputEmail">Kraj urodzenia
                                                         (Geburtsland)</label>
                                                     <select class="form-select py-4" id="inputName" type="text"
-                                                        placeholder="" />
-                                                    <option selected></option>
-                                                    <option value="1">Polska (Polen)</option>
-                                                    <option value="2">Niemcy (Deutschland)</option>
+                                                        placeholder="">
+                                                        <option selected></option>
+                                                        <option value="1">Polska (Polen)</option>
+                                                        <option value="2">Niemcy (Deutschland)</option>
                                                     </select>
                                                 </div>
                                                 <div class="col-md-5">
                                                     <label class="text-dark mb-2" for="inputName">Stan cywilny
                                                         (Familienstand)</label>
                                                     <select class="form-select py-4" id="inputName" type="text"
-                                                        placeholder="" />
-                                                    <option selected></option>
-                                                    <option value="1">wolny/wolna (ledig)</option>
-                                                    <option value="2">żonaty/zamężna (verheiratet)</option>
-                                                    <option value="3">rozwiedziony/rozwiedziona (geschieden)
-                                                    </option>
+                                                        placeholder="">
+                                                        <option selected></option>
+                                                        <option value="1">wolny/wolna (ledig)</option>
+                                                        <option value="2">żonaty/zamężna (verheiratet)</option>
+                                                        <option value="3">rozwiedziony/rozwiedziona (geschieden)
+                                                        </option>
                                                     </select>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="row gx-5 mb-4 mt-10">
+                                                <p class="card-text">Dane do wypłat</p>
+                                                <div class="col-md-6">
+                                                    <label class="text-dark mb-2" for="inputName">Bank</label>
+                                                    <input class="form-control py-4" id="inputName" type="text"
+                                                        placeholder="" />
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <label class="text-dark mb-2" for="inputEmail">BIC</label>
+                                                    <input class="form-control py-4" id="inputEmail" type="email"
+                                                        placeholder="" />
+                                                </div>
+                                            </div>
+                                            <div class="row gx-5 mb-4">
+                                                <div class="col-md-12">
+                                                    <label class="text-dark mb-2" for="inputName">IBAN</label>
+                                                    <input class="form-control py-4" id="inputName" type="text"
+                                                        placeholder="" />
+                                                </div>
+                                            </div>
+
+
+                                            <div class="row gx-5 mb-4 mt-10">
+                                                <p class="card-text">Jeżeli to Twoje pierwsze zatrudnienie w Niemczech wtedy poniższe pola pozostaw puste.</p>
+                                                <div class="col-md-6">
+                                                    <label class="text-dark mb-2" for="inputName">Numer ubezpieczenia społecznego (Sozialversicherungsnummer)</label>
+                                                    <input class="form-control py-4" id="inputName" type="text"
+                                                        placeholder="" />
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <label class="text-dark mb-2" for="inputEmail">Numer identyfikacji podatkowej (Steuer ID)</label>
+                                                    <input class="form-control py-4" id="inputEmail" type="email"
+                                                        placeholder="" />
+                                                </div>
+                                            </div>
+                                            <div class="row gx-5 mb-4">
+                                                <div class="col-md-6">
+                                                    <label class="text-dark mb-2" for="inputName">Nazwa kasy chorych (Name der Krankenkasse)</label>
+                                                    <input class="form-control py-4" id="inputName" type="text"
+                                                        placeholder="" />
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <label class="text-dark mb-2" for="inputEmail">Numer ubezpieczenia zdrowotnego (Versichertennummer)</label>
+                                                    <input class="form-control py-4" id="inputEmail" type="email"
+                                                        placeholder="" />
                                                 </div>
                                             </div>
 
