@@ -231,8 +231,8 @@
                         <div class="container px-5 text-center">
                             <div class="row gx-5 justify-content-center">
                                 <div class="col-lg-8">
-                                    <h1 class="page-header-ui-title mb-3">Management</h1>
-                                    <p class="page-header-ui-text">Recruitment / Application list</p>
+                                    <h1 class="page-header-ui-title mb-3">Application ID {{$candidate->id}} </h1>
+                                    <h4 class="text-white">{{$candidate->first_name}} {{$candidate->last_name}}</h4>
                                 </div>
                             </div>
                         </div>
@@ -284,171 +284,186 @@
                                         </div>
                                     </div> --}}
                             </div>
-                            <div class="col-lg-8 col-xl-9">
-                                <div class="card mb-3">
-                                    <div class="list-group list-group-flush">
+                            <form action="{{ route('candidate.update')}}" method="POST">
+                                @csrf
+                                @method('put')
+                                <input type="hidden" name="id" value="{{$candidate->id}}" />
 
-                                        @foreach (\App\Models\Candidate::orderBy('created_at', 'DESC')->get() as $candidate)
-
-                                        <a class="list-group-item list-group-item-action py-4" href="{{route('candidate.select', ['id' => $candidate->id])}}">
-                                            <div class="d-flex justify-content-between">
-                                                <div class="me-4 d-flex">
-                                                    <div
-                                                        class="icon-stack icon-stack flex-shrink-0 me-4">
-                                                        <i data-feather="user"></i>
-                                                    </div>
-
-                                                    <div>
-                                                        <h6>{{$candidate->first_name}} {{$candidate->last_name}}</h6>
-                                                        <p class="card-text">
-                                                            {{$candidate->phone}}<br />{{$candidate->email}}
-
-                                                        </p>
-
-
-                                                    </div>
-
-                                                </div>
-                                                <div class="small text-gray-400 flex-shrink-0 text-end">
-                                                    {{$candidate->created_at->format('Y-m-d')}}
-                                                    {{-- <br />
-                                                    <div class="badge bg-green-soft rounded-pill text-green">Approved
-                                                    </div> --}}
-                                                </div>
-
-                                            </div>
-
-
-                                            <div class="small flex-shrink-0 mt-2">
-
-                                                {{$candidate->address_street}} {{$candidate->address_number}}, {{$candidate->address_code}} {{$candidate->address_town}}, {{$candidate->address_country}}
-
-                                            </div>
-                                            <div class="text-end">
-                                            <form method="post" action="{{route('candidate.delete', ['id' => $candidate->id])}}">
-                                                @csrf
-                                                <button class="btn btn-sm btn-danger mt-4" type="submit">Delete</button>
-                                            </form>
-                                        </div>
-
-                                        </a>
-
-                                        @endforeach
-
-
-                                        {{-- <a class="list-group-item list-group-item-action py-4" href="#!">
-                                            <div class="d-flex justify-content-between">
-                                                <div class="me-4 d-flex">
-                                                    <div
-                                                        class="icon-stack icon-stack bg-red-soft text-red flex-shrink-0 me-4">
-                                                        <i data-feather="x"></i>
-                                                    </div>
-                                                    <div>
-                                                        <h6>Case #290234</h6>
-                                                        <p class="card-text">Your request has been declined. Thank you
-                                                            for using our service. This case is now being marked as
-                                                            closed. If you would like to reopen this case, please reply
-                                                            to this message.</p>
-                                                    </div>
-                                                </div>
-                                                <div class="small text-gray-400 flex-shrink-0 text-end">
-                                                    10:26 PM
-                                                    <br />
-                                                    <div class="badge bg-red-soft rounded-pill text-red">Declined</div>
-                                                </div>
-                                            </div>
-                                        </a>
-                                        <a class="list-group-item list-group-item-action py-4" href="#!">
-                                            <div class="d-flex justify-content-between">
-                                                <div class="me-4 d-flex">
-                                                    <div
-                                                        class="icon-stack icon-stack bg-green-soft text-green flex-shrink-0 me-4">
-                                                        <i data-feather="check"></i>
-                                                    </div>
-                                                    <div>
-                                                        <h6>Case #290194</h6>
-                                                        <p class="card-text">Your request has been approved. Thank you
-                                                            for using our service. This case is now being marked as
-                                                            closed. If you would like to reopen this case, please reply
-                                                            to this message.</p>
-                                                    </div>
-                                                </div>
-                                                <div class="small text-gray-400 flex-shrink-0 text-end">
-                                                    Monday
-                                                    <br />
-                                                    <div class="badge bg-green-soft rounded-pill text-green">Approved
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </a>
-                                        <a class="list-group-item list-group-item-action py-4" href="#!">
-                                            <div class="d-flex justify-content-between">
-                                                <div class="me-4 d-flex">
-                                                    <div
-                                                        class="icon-stack icon-stack bg-yellow-soft text-yellow flex-shrink-0 me-4">
-                                                        <i data-feather="file-text"></i>
-                                                    </div>
-                                                    <div>
-                                                        <h6>Case #290127</h6>
-                                                        <p class="card-text">Your request has been approved. Thank you
-                                                            for using our service. This case is now being marked as
-                                                            closed. If you would like to reopen this case, please reply
-                                                            to this message.</p>
-                                                    </div>
-                                                </div>
-                                                <div class="small text-gray-400 flex-shrink-0 text-end">
-                                                    2 weeks ago
-                                                    <br />
-                                                    <div class="badge bg-yellow-soft rounded-pill text-yellow">Pending
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </a> --}}
+                                <div class="row gx-5 mb-4">
+                                    <div class="col-md-6">
+                                        <label class="text-dark mb-2" for="first_name">Vorname</label>
+                                        <input class="form-control py-4" id="first_name" name="first_name"
+                                            type="text" required="required" placeholder="" value="{{$candidate->first_name}}" />
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="text-dark mb-2" for="last_name">Nachname</label>
+                                        <input class="form-control py-4" id="last_name" name="last_name"
+                                            type="text" required="required" placeholder="" value="{{$candidate->last_name}}" />
+                                    </div>
+                                </div>
 
 
 
+                                <div class="row gx-5 mb-4">
+                                    <p class="card-text"></p>
+                                    <div class="col-md-3">
+                                        <label class="text-dark mb-2" for="gender">Geschlecht</label>
+                                        <select class="form-select py-4" id="gender" name="gender"
+                                            type="text" placeholder="" >
+                                            <option selected value="{{$candidate->gender}}">@if ($candidate->gender == 1) männlich @endif @if ($candidate->gender == 2) weiblich @endif @if ($candidate->gender == 3) divers @endif</option>
+                                            <option value="1">männlich</option>
+                                            <option value="2">weiblich</option>
+                                            <option value="3">divers</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label class="text-dark mb-2" for="phone">Handynummer</label>
+                                        <input class="form-control py-4" id="phone" name="phone"
+                                            type="text" required="required" placeholder="" value="{{$candidate->phone}}" />
+                                    </div>
+                                    <div class="col-md-5">
+                                        <label class="text-dark mb-2" for="email">E-mail</label>
+                                        <input class="form-control py-4" id="email" name="email"
+                                            type="email" required="required" placeholder="" value="{{$candidate->email}}" />
+                                    </div>
+                                </div>
 
 
-
-
-                                        {{-- <a class="list-group-item list-group-item-action py-4" href="#!">
-                                                <div class="d-flex justify-content-between">
-                                                    <div class="me-4 d-flex">
-                                                        <div class="icon-stack icon-stack bg-yellow-soft text-yellow flex-shrink-0 me-4"><i data-feather="file-text"></i></div>
-                                                        <div>
-                                                            <h6>Case #290078</h6>
-                                                            <p class="card-text">Your request has been approved. Thank you for using our service. This case is now being marked as closed. If you would like to reopen this case, please reply to this message.</p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="small text-gray-400 flex-shrink-0 text-end">
-                                                        2 weeks ago
-                                                        <br />
-                                                        <div class="badge bg-yellow-soft rounded-pill text-yellow">Pending</div>
-                                                    </div>
-                                                </div>
-                                            </a> --}}
-
-
-                                        {{-- <a class="list-group-item list-group-item-action py-4" href="#!">
-                                            <div class="text-center small">View Archived Cases</div>
-                                        </a> --}}
-
+                                <div class="row gx-5 mb-4 mt-10">
+                                    <div class="col-md-7">
+                                        <label class="text-dark mb-2" for="address_street">Straße</label>
+                                        <input class="form-control py-4" id="address_street"
+                                            name="address_street" type="text" required="required" placeholder="" value="{{$candidate->address_street}}" />
+                                    </div>
+                                    <div class="col-md-3">
+                                        <label class="text-dark mb-2" for="address_number">Hausnummer</label>
+                                        <input class="form-control py-4" id="address_number"
+                                            name="address_number" type="text" required="required" placeholder="" value="{{$candidate->address_number}}" />
+                                    </div>
+                                </div>
+                                <div class="row gx-5 mb-4">
+                                    <div class="col-md-4">
+                                        <label class="text-dark mb-2" for="address_code">PLZ</label>
+                                        <input class="form-control py-4" id="address_code"
+                                            name="address_code" type="text" required="required" placeholder="" value="{{$candidate->address_code}}"/>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="text-dark mb-2" for="address_town">Stadt</label>
+                                        <input class="form-control py-4" id="address_town"
+                                            name="address_town" type="text" required="required" placeholder="" value="{{$candidate->address_town}}"/>
+                                    </div>
+                                </div>
+                                <div class="row gx-5 mb-4">
+                                    <div class="col-md-4">
+                                        <label class="text-dark mb-2" for="address_country">Land</label>
+                                        <select class="form-select py-4" id="address_country"
+                                            name="address_country" type="text" required="required" placeholder="">
+                                            <option selected value="{{$candidate->address_country}}">{{$candidate->address_country}}</option>
+                                            <option value="Polen">Polen</option>
+                                            <option value="Deutschland">Deutschland</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6">
 
                                     </div>
                                 </div>
-                                {{-- <div class="text-end mb-5">
-                                        <a class="btn btn btn-primary-soft text-primary fw-500" href="#!">
-                                            <i class="fas fa-file-pdf me-1"></i>
-                                            Download case report
-                                        </a>
+
+                                <div class="row gx-5 mb-4 mt-10">
+                                    <div class="col-md-4">
+                                        <label class="text-dark mb-2" for="birth_date">Geburtsdatum</label>
+                                        <input class="form-control py-4" id=" "
+                                            name="birth_date" type="date" required="required" placeholder="" value="{{$candidate->birth_date}}" />
                                     </div>
-                                    <div class="card z-1">
-                                        <div class="card-body text-center py-5">
-                                            <h2 class="mb-3">We're here to help</h2>
-                                            <a class="btn btn-primary fw-500" href="#!">Open a New Ticket</a>
-                                        </div>
+                                    <div class="col-md-6">
+                                        <label class="text-dark mb-2" for="birth_town">Geburtsort</label>
+                                        <input class="form-control py-4" id="birth_town"
+                                            name="birth_town" type="text" required="required" placeholder="" value="{{$candidate->birth_town}}" />
+                                    </div>
+                                </div>
+                                <div class="row gx-5 mb-4">
+                                    <div class="col-md-5">
+                                        <label class="text-dark mb-2" for="birth_country">Geburtsland</label>
+                                        <select class="form-select py-4" id="birth_country"
+                                            name="birth_country" type="text" required="required" placeholder="" >
+                                            <option selected value="{{$candidate->birth_country}}">{{$candidate->birth_country}}</option>
+                                            <option value="Polen">Polen</option>
+                                            <option value="Deutschland">Deutschland</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-5">
+                                        <label class="text-dark mb-2" for="marital_status">Familienstand</label>
+                                        <select class="form-select py-4" id="marital_status"
+                                            name="marital_status" type="text" required="required" placeholder="">
+                                            <option selected value="{{$candidate->marital_status}}">{{$candidate->marital_status}}</option>
+                                            <option value="ledig">ledig</option>
+                                            <option value="verheiratet">verheiratet</option>
+                                            <option value="geschieden">geschieden</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+
+                                <div class="row gx-5 mb-4 mt-10">
+                                    <div class="col-md-6">
+                                        <label class="text-dark mb-2" for="bank">Bank</label>
+                                        <input class="form-control py-4" id="bank" name="bank"
+                                            type="text" placeholder="" value="{{$candidate->bank}}" />
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="text-dark mb-2" for="bic">BIC</label>
+                                        <input class="form-control py-4" id="bic" name="bic"
+                                            type="text" placeholder="" value="{{$candidate->bic}}" />
+                                    </div>
+                                </div>
+                                <div class="row gx-5 mb-4">
+                                    <div class="col-md-12">
+                                        <label class="text-dark mb-2" for="iban">IBAN</label>
+                                        <input class="form-control py-4" id="iban" name="iban"
+                                            type="text" placeholder="" value="{{$candidate->iban}}" />
+                                    </div>
+                                </div>
+
+
+                                <div class="row gx-5 mb-4 mt-10">
+                                    <div class="col-md-6">
+                                        <label class="text-dark mb-2"
+                                            for="sozialversicherungsnummer">Sozialversicherungsnummer</label>
+                                        <input class="form-control py-4" id="sozialversicherungsnummer"
+                                            name="sozialversicherungsnummer" type="text"
+                                            placeholder="" value="{{$candidate->sozialversicherungsnummer}}" />
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="text-dark mb-2" for="steuer_id">Steuer ID</label>
+                                        <input class="form-control py-4" id="steuer_id" name="steuer_id"
+                                            type="text" placeholder="" value="{{$candidate->steuer_id}}" />
+                                    </div>
+                                </div>
+                                <div class="row gx-5 mb-4">
+                                    <div class="col-md-6">
+                                        <label class="text-dark mb-2" for="krankenkasse">Name der Krankenkasse</label>
+                                        <input class="form-control py-4" id="krankenkasse"
+                                            name="krankenkasse" type="text" placeholder="" value="{{$candidate->krankenkasse}}" />
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="text-dark mb-2" for="versichertennummer">Versichertennummer</label>
+                                        <input class="form-control py-4" id="versichertennummer"
+                                            name="versichertennummer" type="text" placeholder="" value="{{$candidate->versichertennummer}}" />
+                                    </div>
+                                </div>
+
+
+
+
+
+                                {{-- <div class="mb-4">
+                                        <label class="text-dark mb-2" for="inputMessage">Message</label>
+                                        <textarea class="form-control py-3" id="inputMessage" type="text" placeholder="Enter your message..." rows="4"></textarea>
                                     </div> --}}
-                            </div>
+
+                                <div class="text-center"><button class="btn btn-primary mt-4"
+                                        type="submit">Update</button></div>
+                            </form>
+
                         </div>
                     </div>
                     {{-- <div class="svg-border-rounded text-dark">

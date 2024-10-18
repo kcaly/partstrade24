@@ -6,7 +6,7 @@
         <div class="col-md-8">
             <div class="card">
                 {{-- <div class="card-header">{{ __('Register') }}</div> --}}
-                <div class="card-header text-center"><img src="{{ asset('assets/img/logo_partstrade24gmbh_black_256x256.png') }}"></div>
+                <div class="card-header text-center"><img src="{{ asset('assets/img/logo_partstrade24gmbh_black_256x256_70.png') }}"></div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">

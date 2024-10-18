@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>Aplikuj - PARTS TRADE 24 GmbH (Amazon Service Partner) </title>
+    <title>Aplikuj - PARTS TRADE 24 GmbH (Amazon Service Partner)</title>
     <link href="{{ asset('css/styles.css') }}" rel="stylesheet" />
     <link rel="icon" type="image/x-icon" href="{{ asset('assets/img/favicon.png') }}" />
     <script data-search-pseudo-elements defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"
@@ -296,10 +296,10 @@
                                                     <label class="text-dark mb-2" for="address_country">Kraj
                                                         (Land)</label>
                                                     <select class="form-select py-4" id="birth_country"
-                                                        name="birth_country" type="text" required="required" placeholder="">
+                                                        name="address_country" type="text" required="required" placeholder="">
                                                         <option selected></option>
-                                                        <option value="PL">Polska (Polen)</option>
-                                                        <option value="DE">Niemcy (Deutschland)</option>
+                                                        <option value="Polen">Polska (Polen)</option>
+                                                        <option value="Deutschland">Niemcy (Deutschland)</option>
                                                     </select>
                                                 </div>
                                                 <div class="col-md-6">
@@ -328,8 +328,8 @@
                                                     <select class="form-select py-4" id="birth_country"
                                                         name="birth_country" type="text" required="required" placeholder="">
                                                         <option selected></option>
-                                                        <option value="PL">Polska (Polen)</option>
-                                                        <option value="DE">Niemcy (Deutschland)</option>
+                                                        <option value="Polen">Polska (Polen)</option>
+                                                        <option value="Deutschland">Niemcy (Deutschland)</option>
                                                     </select>
                                                 </div>
                                                 <div class="col-md-5">
@@ -338,9 +338,9 @@
                                                     <select class="form-select py-4" id="marital_status"
                                                         name="marital_status" type="text" required="required" placeholder="">
                                                         <option selected></option>
-                                                        <option value="0">wolny/wolna (ledig)</option>
-                                                        <option value="1">żonaty/zamężna (verheiratet)</option>
-                                                        <option value="2">rozwiedziony/rozwiedziona (geschieden)
+                                                        <option value="ledig">wolny/wolna (ledig)</option>
+                                                        <option value="verheiratet">żonaty/zamężna (verheiratet)</option>
+                                                        <option value="geschieden">rozwiedziony/rozwiedziona (geschieden)
                                                         </option>
                                                     </select>
                                                 </div>

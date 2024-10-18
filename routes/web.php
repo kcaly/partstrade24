@@ -19,19 +19,25 @@ Route::get('/', function () {
     return view('goto_domain_partstrade-24de');
 });
 
-Route::get('/home', function () {
-    return view('panel');
-});
-
 Auth::routes();
-
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('/apply', [CandidatesController::class, 'index'])->name('candidate.create');
+Route::get('apply', [CandidatesController::class, 'index'])->name('candidate.create');
 Route::post('apply/save', [CandidatesController::class, 'store'])->name('candidate.store');
-Route::get('apply/select/{id}', [CandidatesController::class, 'select'])->name('candidate.select');
-Route::get('apply/list', [CandidatesController::class, 'list'])->name('candidate.list');
+Route::view('apply-success', 'apply-success')->name('apply.success');
 
+Route::middleware('auth')->group(function() {
 
+    Route::get('/panel', function () {
+        return view('panel');
+    });
+
+    Route::get('apply/select/{id}', [CandidatesController::class, 'select'])->name('candidate.select');
+    Route::get('apply/list', [CandidatesController::class, 'list'])->name('candidate.list');
+    Route::put('apply-update', [CandidatesController::class, 'update'])->name('candidate.update');
+    Route::post('apply-delete', [CandidatesController::class, 'delete'])->name('candidate.delete');
+    
+
+});
 
 

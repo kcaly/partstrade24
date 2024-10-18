@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('candidates', function (Blueprint $table) {
             $table->id();
 
-            $table->string('id_link')->nullable(); 
+            $table->string('id_link')->nullable();
 
             $table->string('first_name');
             $table->string('last_name');
@@ -30,10 +30,10 @@ return new class extends Migration
             $table->string('address_town');
             $table->string('address_country');
 
-            $table->string('birth_date');
+            $table->date('birth_date');
             $table->string('birth_town');
             $table->string('birth_country');
-            $table->tinyInteger('marital_status')->nullable();
+            $table->string('marital_status')->nullable();
 
             $table->string('bank')->nullable();
             $table->string('bic')->nullable();
