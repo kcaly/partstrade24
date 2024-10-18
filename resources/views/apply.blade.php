@@ -295,8 +295,12 @@
                                                 <div class="col-md-4">
                                                     <label class="text-dark mb-2" for="address_country">Kraj
                                                         (Land)</label>
-                                                    <input class="form-control py-4" id="address_country"
-                                                        name="address_country" type="text" required="required" placeholder="" />
+                                                    <select class="form-select py-4" id="birth_country"
+                                                        name="birth_country" type="text" required="required" placeholder="">
+                                                        <option selected></option>
+                                                        <option value="PL">Polska (Polen)</option>
+                                                        <option value="DE">Niemcy (Deutschland)</option>
+                                                    </select>
                                                 </div>
                                                 <div class="col-md-6">
 
