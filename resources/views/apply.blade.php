@@ -187,7 +187,8 @@
                                     <img src="{{ asset('assets/img/logo_partstrade24gmbh_white_256x256.png') }}">
                                     <h1 class="page-header-ui-title mb-3">DOŁĄCZ DO NAS!</h1>
                                     <p class="page-header-ui-text">Wypełnij dane osobowe w celu złożenia aplikacji. Po
-                                        przesłaniu formularza skontaktujemy się z Tobą. Aby przyspieszyć proces rekrutacyjny wypełnij także dane niezbędne do
+                                        przesłaniu formularza skontaktujemy się z Tobą. Aby przyspieszyć proces
+                                        rekrutacyjny wypełnij także dane niezbędne do
                                         sporządzenia umowy.</p>
                                 </div>
                             </div>
@@ -214,29 +215,32 @@
                                         </div>
                                         {{-- <h5>Personal data</h5> --}}
                                         {{-- <p class="card-text">Dane osobowe</p> --}}
-                                        <form>
+                                        <form action="{{ route('candidate.store')}}" method="POST">
+                                            {{ csrf_field() }}
                                             <div class="row gx-5 mb-4">
                                                 <div class="col-md-6">
-                                                    <label class="text-dark mb-2" for="inputName">Imię (Vorname)</label>
-                                                    <input class="form-control py-4" id="inputName" type="text"
-                                                        placeholder="" />
+                                                    <label class="text-dark mb-2" for="first_name">Imię
+                                                        (Vorname)</label>
+                                                    <input class="form-control py-4" id="first_name" name="first_name"
+                                                        type="text" required="required" placeholder="" />
                                                 </div>
                                                 <div class="col-md-6">
-                                                    <label class="text-dark mb-2" for="inputEmail">Nazwisko
+                                                    <label class="text-dark mb-2" for="last_name">Nazwisko
                                                         (Nachname)</label>
-                                                    <input class="form-control py-4" id="inputEmail" type="email"
-                                                        placeholder="" />
+                                                    <input class="form-control py-4" id="last_name" name="last_name"
+                                                        type="text" required="required" placeholder="" />
                                                 </div>
                                             </div>
 
-                                            
+
 
                                             <div class="row gx-5 mb-4">
                                                 <p class="card-text"></p>
                                                 <div class="col-md-3">
-                                                    <label class="text-dark mb-2" for="inputName">Płeć (Geschlecht)</label>
-                                                    <select class="form-select py-4" id="inputName" type="text"
-                                                        placeholder="">
+                                                    <label class="text-dark mb-2" for="gender">Płeć
+                                                        (Geschlecht)</label>
+                                                    <select class="form-select py-4" id="gender" name="gender"
+                                                        type="text" placeholder="">
                                                         <option selected></option>
                                                         <option value="1">mężczyzna (männlich)</option>
                                                         <option value="2">kobieta (weiblich)</option>
@@ -245,15 +249,15 @@
                                                     </select>
                                                 </div>
                                                 <div class="col-md-4">
-                                                    <label class="text-dark mb-2" for="inputName">Telefon
+                                                    <label class="text-dark mb-2" for="phone">Telefon
                                                         (Handynummer)</label>
-                                                    <input class="form-control py-4" id="inputName" type="text"
-                                                        placeholder="" />
+                                                    <input class="form-control py-4" id="phone" name="phone"
+                                                        type="text" required="required" placeholder="" />
                                                 </div>
                                                 <div class="col-md-5">
-                                                    <label class="text-dark mb-2" for="inputEmail">E-mail</label>
-                                                    <input class="form-control py-4" id="inputEmail" type="email"
-                                                        placeholder="" />
+                                                    <label class="text-dark mb-2" for="email">E-mail</label>
+                                                    <input class="form-control py-4" id="email" name="email"
+                                                        type="email" required="required" placeholder="" />
                                                 </div>
                                             </div>
 
@@ -261,36 +265,38 @@
                                             <div class="row gx-5 mb-4 mt-10">
                                                 <p class="card-text">Adres zamieszkania</p>
                                                 <div class="col-md-7">
-                                                    <label class="text-dark mb-2" for="inputName">Ulica (Straße)</label>
-                                                    <input class="form-control py-4" id="inputName" type="text"
-                                                        placeholder="" />
+                                                    <label class="text-dark mb-2" for="address_street">Ulica
+                                                        (Straße)</label>
+                                                    <input class="form-control py-4" id="address_street"
+                                                        name="address_street" type="text" required="required" placeholder="" />
                                                 </div>
                                                 <div class="col-md-3">
-                                                    <label class="text-dark mb-2" for="inputEmail">Numer
+                                                    <label class="text-dark mb-2" for="address_number">Numer
                                                         (Hausnummer)</label>
-                                                    <input class="form-control py-4" id="inputEmail" type="email"
-                                                        placeholder="" />
+                                                    <input class="form-control py-4" id="address_number"
+                                                        name="address_number" type="text" required="required" placeholder="" />
                                                 </div>
                                             </div>
                                             <div class="row gx-5 mb-4">
                                                 <div class="col-md-4">
-                                                    <label class="text-dark mb-2" for="inputName">Kod pocztowy
+                                                    <label class="text-dark mb-2" for="address_code">Kod pocztowy
                                                         (PLZ)</label>
-                                                    <input class="form-control py-4" id="inputName" type="text"
-                                                        placeholder="" />
+                                                    <input class="form-control py-4" id="address_code"
+                                                        name="address_code" type="text" required="required" placeholder="" />
                                                 </div>
                                                 <div class="col-md-6">
-                                                    <label class="text-dark mb-2" for="inputEmail">Miejscowość
+                                                    <label class="text-dark mb-2" for="address_town">Miejscowość
                                                         (Stadt)</label>
-                                                    <input class="form-control py-4" id="inputEmail" type="email"
-                                                        placeholder="" />
+                                                    <input class="form-control py-4" id="address_town"
+                                                        name="address_town" type="text" required="required" placeholder="" />
                                                 </div>
                                             </div>
                                             <div class="row gx-5 mb-4">
                                                 <div class="col-md-4">
-                                                    <label class="text-dark mb-2" for="inputName">Kraj (Land)</label>
-                                                    <input class="form-control py-4" id="inputName" type="text"
-                                                        placeholder="" />
+                                                    <label class="text-dark mb-2" for="address_country">Kraj
+                                                        (Land)</label>
+                                                    <input class="form-control py-4" id="address_country"
+                                                        name="address_country" type="text" required="required" placeholder="" />
                                                 </div>
                                                 <div class="col-md-6">
 
@@ -299,38 +305,38 @@
 
                                             <div class="row gx-5 mb-4 mt-10">
                                                 <div class="col-md-4">
-                                                    <label class="text-dark mb-2" for="inputName">Data urodzenia
+                                                    <label class="text-dark mb-2" for="birth_date">Data urodzenia
                                                         (Geburtsdatum)</label>
-                                                    <input class="form-control py-4" id="inputName" type="date"
-                                                        placeholder="" />
+                                                    <input class="form-control py-4" id="birth_date"
+                                                        name="birth_date" type="date" required="required" placeholder="" />
                                                 </div>
                                                 <div class="col-md-6">
-                                                    <label class="text-dark mb-2" for="inputEmail">Miejsce urodzenia
+                                                    <label class="text-dark mb-2" for="birth_town">Miejsce urodzenia
                                                         (Geburtsort)</label>
-                                                    <input class="form-control py-4" id="inputEmail" type="email"
-                                                        placeholder="" />
+                                                    <input class="form-control py-4" id="birth_town"
+                                                        name="birth_town" type="text" required="required" placeholder="" />
                                                 </div>
                                             </div>
                                             <div class="row gx-5 mb-4">
                                                 <div class="col-md-5">
-                                                    <label class="text-dark mb-2" for="inputEmail">Kraj urodzenia
+                                                    <label class="text-dark mb-2" for="birth_country">Kraj urodzenia
                                                         (Geburtsland)</label>
-                                                    <select class="form-select py-4" id="inputName" type="text"
-                                                        placeholder="">
+                                                    <select class="form-select py-4" id="birth_country"
+                                                        name="birth_country" type="text" required="required" placeholder="">
                                                         <option selected></option>
-                                                        <option value="1">Polska (Polen)</option>
-                                                        <option value="2">Niemcy (Deutschland)</option>
+                                                        <option value="PL">Polska (Polen)</option>
+                                                        <option value="DE">Niemcy (Deutschland)</option>
                                                     </select>
                                                 </div>
                                                 <div class="col-md-5">
-                                                    <label class="text-dark mb-2" for="inputName">Stan cywilny
+                                                    <label class="text-dark mb-2" for="marital_status">Stan cywilny
                                                         (Familienstand)</label>
-                                                    <select class="form-select py-4" id="inputName" type="text"
-                                                        placeholder="">
+                                                    <select class="form-select py-4" id="marital_status"
+                                                        name="marital_status" type="text" required="required" placeholder="">
                                                         <option selected></option>
-                                                        <option value="1">wolny/wolna (ledig)</option>
-                                                        <option value="2">żonaty/zamężna (verheiratet)</option>
-                                                        <option value="3">rozwiedziony/rozwiedziona (geschieden)
+                                                        <option value="0">wolny/wolna (ledig)</option>
+                                                        <option value="1">żonaty/zamężna (verheiratet)</option>
+                                                        <option value="2">rozwiedziony/rozwiedziona (geschieden)
                                                         </option>
                                                     </select>
                                                 </div>
@@ -340,48 +346,57 @@
                                             <div class="row gx-5 mb-4 mt-10">
                                                 <p class="card-text">Dane do wypłat</p>
                                                 <div class="col-md-6">
-                                                    <label class="text-dark mb-2" for="inputName">Bank</label>
-                                                    <input class="form-control py-4" id="inputName" type="text"
-                                                        placeholder="" />
+                                                    <label class="text-dark mb-2" for="bank">Bank</label>
+                                                    <input class="form-control py-4" id="bank" name="bank"
+                                                        type="text" placeholder="" />
                                                 </div>
                                                 <div class="col-md-6">
-                                                    <label class="text-dark mb-2" for="inputEmail">BIC</label>
-                                                    <input class="form-control py-4" id="inputEmail" type="email"
-                                                        placeholder="" />
+                                                    <label class="text-dark mb-2" for="bic">BIC</label>
+                                                    <input class="form-control py-4" id="bic" name="bic"
+                                                        type="text" placeholder="" />
                                                 </div>
                                             </div>
                                             <div class="row gx-5 mb-4">
                                                 <div class="col-md-12">
-                                                    <label class="text-dark mb-2" for="inputName">IBAN</label>
-                                                    <input class="form-control py-4" id="inputName" type="text"
-                                                        placeholder="" />
+                                                    <label class="text-dark mb-2" for="iban">IBAN</label>
+                                                    <input class="form-control py-4" id="iban" name="iban"
+                                                        type="text" placeholder="" />
                                                 </div>
                                             </div>
 
 
                                             <div class="row gx-5 mb-4 mt-10">
-                                                <p class="card-text">Jeżeli to Twoje pierwsze zatrudnienie w Niemczech wtedy poniższe pola pozostaw puste.</p>
+                                                <p class="card-text">Jeżeli to Twoje pierwsze zatrudnienie w Niemczech
+                                                    wtedy poniższe pola pozostaw puste.</p>
                                                 <div class="col-md-6">
-                                                    <label class="text-dark mb-2" for="inputName">Numer ubezpieczenia społecznego (Sozialversicherungsnummer)</label>
-                                                    <input class="form-control py-4" id="inputName" type="text"
+                                                    <label class="text-dark mb-2"
+                                                        for="sozialversicherungsnummer">Numer ubezpieczenia
+                                                        społecznego (Sozialversicherungsnummer)</label>
+                                                    <input class="form-control py-4" id="sozialversicherungsnummer"
+                                                        name="sozialversicherungsnummer" type="text"
                                                         placeholder="" />
                                                 </div>
                                                 <div class="col-md-6">
-                                                    <label class="text-dark mb-2" for="inputEmail">Numer identyfikacji podatkowej (Steuer ID)</label>
-                                                    <input class="form-control py-4" id="inputEmail" type="email"
-                                                        placeholder="" />
+                                                    <label class="text-dark mb-2" for="steuer_id">Numer identyfikacji
+                                                        podatkowej (Steuer ID)</label>
+                                                    <input class="form-control py-4" id="steuer_id" name="steuer_id"
+                                                        type="text" placeholder="" />
                                                 </div>
                                             </div>
                                             <div class="row gx-5 mb-4">
                                                 <div class="col-md-6">
-                                                    <label class="text-dark mb-2" for="inputName">Nazwa kasy chorych (Name der Krankenkasse)</label>
-                                                    <input class="form-control py-4" id="inputName" type="text"
-                                                        placeholder="" />
+                                                    <label class="text-dark mb-2" for="krankenkasse">Nazwa kasy
+                                                        chorych
+                                                        (Name der Krankenkasse)</label>
+                                                    <input class="form-control py-4" id="krankenkasse"
+                                                        name="krankenkasse" type="text" placeholder="" />
                                                 </div>
                                                 <div class="col-md-6">
-                                                    <label class="text-dark mb-2" for="inputEmail">Numer ubezpieczenia zdrowotnego (Versichertennummer)</label>
-                                                    <input class="form-control py-4" id="inputEmail" type="email"
-                                                        placeholder="" />
+                                                    <label class="text-dark mb-2" for="versichertennummer">Numer
+                                                        ubezpieczenia
+                                                        zdrowotnego (Versichertennummer)</label>
+                                                    <input class="form-control py-4" id="versichertennummer"
+                                                        name="versichertennummer" type="text" placeholder="" />
                                                 </div>
                                             </div>
 
