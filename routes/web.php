@@ -21,6 +21,7 @@ Route::get('/', function () {
 
 Auth::routes();
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [CandidatesController::class, 'list'])->name('candidate.list');
 
 Route::get('apply', [CandidatesController::class, 'index'])->name('candidate.create');
 Route::post('apply/save', [CandidatesController::class, 'store'])->name('candidate.store');
@@ -36,7 +37,6 @@ Route::middleware('auth')->group(function() {
     Route::get('apply/list', [CandidatesController::class, 'list'])->name('candidate.list');
     Route::put('apply-update', [CandidatesController::class, 'update'])->name('candidate.update');
     Route::post('apply-delete', [CandidatesController::class, 'delete'])->name('candidate.delete');
-    
 
 });
 
