@@ -33,36 +33,7 @@
 
                             <ul class="navbar-nav ms-auto me-lg-5">
 
-                                <li class="nav-item dropdown no-caret">
-                                    <a class="nav-link dropdown-toggle" id="navbarDropdownDocs" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        Recruitment
-                                        <i class="fas fa-chevron-right dropdown-arrow"></i>
-                                    </a>
-                                    <div class="dropdown-menu dropdown-menu-end animated--fade-in-up" aria-labelledby="navbarDropdownDocs">
-                                        <a class="dropdown-item py-3" href="{{route('candidate.list')}}">
-                                            <div class="icon-stack bg-primary-soft text-primary me-4"><i data-feather="list"></i></div>
-                                            <div>
-                                                Application list
-                                            </div>
-                                        </a>
-
-                                        <div class="dropdown-divider m-0"></div>
-
-                                        <a class="dropdown-item py-3" href="{{route('candidate.create')}}">
-                                            <div class="icon-stack bg-primary-soft text-primary me-4"><i data-feather="user"></i></div>
-                                            <div>
-                                                New application
-                                            </div>
-                                        </a>
-
-                                        {{-- <a class="dropdown-item py-3" href="https://docs.startbootstrap.com/sb-ui-kit-pro/changelog" target="_blank">
-                                            <div class="icon-stack bg-primary-soft text-primary me-4"><i data-feather="file-text"></i></div>
-                                            <div>
-                                                Updates and changes
-                                            </div>
-                                        </a> --}}
-                                    </div>
-                                </li>
+                                <li class="nav-item"><a class="nav-link" href="{{route('candidate.list')}}">Application list</a></li>
 
                                 <!-- Authentication Links -->
                                 @guest
@@ -216,7 +187,37 @@
                                         </div>
                                     </li> --}}
 
-
+                                    {{-- <li class="nav-item dropdown no-caret">
+                                        <a class="nav-link dropdown-toggle" id="navbarDropdownDocs" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Documentation
+                                            <i class="fas fa-chevron-right dropdown-arrow"></i>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-end animated--fade-in-up" aria-labelledby="navbarDropdownDocs">
+                                            <a class="dropdown-item py-3" href="https://docs.startbootstrap.com/sb-ui-kit-pro/quickstart" target="_blank">
+                                                <div class="icon-stack bg-primary-soft text-primary me-4"><i data-feather="book-open"></i></div>
+                                                <div>
+                                                    <div class="small text-gray-500">Documentation</div>
+                                                    Usage instructions and reference
+                                                </div>
+                                            </a>
+                                            <div class="dropdown-divider m-0"></div>
+                                            <a class="dropdown-item py-3" href="https://docs.startbootstrap.com/sb-ui-kit-pro/components" target="_blank">
+                                                <div class="icon-stack bg-primary-soft text-primary me-4"><i data-feather="code"></i></div>
+                                                <div>
+                                                    <div class="small text-gray-500">Components</div>
+                                                    Code snippets and reference
+                                                </div>
+                                            </a>
+                                            <div class="dropdown-divider m-0"></div>
+                                            <a class="dropdown-item py-3" href="https://docs.startbootstrap.com/sb-ui-kit-pro/changelog" target="_blank">
+                                                <div class="icon-stack bg-primary-soft text-primary me-4"><i data-feather="file-text"></i></div>
+                                                <div>
+                                                    <div class="small text-gray-500">Changelog</div>
+                                                    Updates and changes
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </li> --}}
                             </ul>
                             {{-- <a class="btn fw-500 ms-lg-4 btn-teal" href="https://shop.startbootstrap.com/sb-ui-kit-pro">
                                     Buy Now
@@ -232,7 +233,7 @@
                             <div class="row gx-5 justify-content-center">
                                 <div class="col-lg-8">
                                     <h1 class="page-header-ui-title mb-3">Management panel</h1>
-                                    <p class="page-header-ui-text">Recruitment / Application list</p>
+                                    <p class="page-header-ui-text">Recruitment (application list)</p>
                                 </div>
                             </div>
                         </div>

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CandidatesController;
+use App\Models\Candidate;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -28,6 +29,9 @@ Auth::routes();
 
 Route::get('/apply', [CandidatesController::class, 'index'])->name('candidate.create');
 Route::post('apply/save', [CandidatesController::class, 'store'])->name('candidate.store');
+Route::get('apply/select/{id}', [CandidatesController::class, 'select'])->name('candidate.select');
+Route::get('apply/list', [CandidatesController::class, 'list'])->name('candidate.list');
+
 
 
 

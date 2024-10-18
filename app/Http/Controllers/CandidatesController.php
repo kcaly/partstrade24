@@ -13,9 +13,14 @@ class CandidatesController extends Controller
         return view('apply');
     }
 
+    public function list()
+    {
+        return view('panel');
+    }
+
     public function store(Request $request)
     {
-        
+
         $candidate = new Candidate();
         $candidate->first_name = $request->first_name;
         $candidate->last_name = $request->last_name;
@@ -42,6 +47,14 @@ class CandidatesController extends Controller
         $candidate->save();
 
     }
+
+    public function select($id)
+    {
+        dd($id);
+    }
+
+
+
 
 
 }
